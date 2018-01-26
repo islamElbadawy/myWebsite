@@ -12,6 +12,7 @@
 <p *ngIf="status; else error">The user has logged in</p>
 <ng-template #error>
 <p>Username or password is not correct</p>
+<router-outlet></router-outlet>
 </ng-template>
 
 
