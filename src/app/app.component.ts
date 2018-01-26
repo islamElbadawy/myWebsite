@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'islam M. Elbadawy';
   name:string;
   password:string;
+  status:boolean;
   constructor(private mylogin:LoginService){
     //var first = this.mylogin.login("admin" , "admin2");
     //var seconde = this.mylogin.login("admin" , "admin");
@@ -35,6 +36,7 @@ export class AppComponent {
 
   login(){
     var result= this.mylogin.login(this.name , this.password);
+    this.status = result;
     console.log(result);
   }
 }

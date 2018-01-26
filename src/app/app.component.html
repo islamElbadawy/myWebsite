@@ -6,7 +6,10 @@
   <input name="name" type="text" [(ngModel)]=name><br><br>
   <label for="password">Password</label>
   <input name="password" type="password" [(ngModel)]=password><br><br>
-
   <input type="submit" value="Login" (click)="login()">
-
 </form>
+
+<p *ngIf="status; else error">The user has logged in</p>
+<ng-template #error>
+<p>Username or password is not correct</p>
+</ng-template>
