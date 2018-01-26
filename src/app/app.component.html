@@ -1,4 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<input id='name' type="text" (input)="show()" (focus)="focus()" (select)="select()" (blur)="blur()" [(ngModel)]=name>
 
+<!-- Login Form -->
+<form action="">
+  <label for="name">Name</label>
+  <input name="name" type="text" [(ngModel)]=name><br><br>
+  <label for="password">Password</label>
+  <input name="password" type="password" [(ngModel)]=password><br><br>
 
+  <input type="submit" value="Login" (click)="login()">
+
+</form>

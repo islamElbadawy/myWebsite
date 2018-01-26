@@ -10,16 +10,17 @@ import { LoginService } from './Services/login.service';
 })
 export class AppComponent {
   title = 'islam M. Elbadawy';
-  name:string="islamElbadawy";
+  name:string;
+  password:string;
   constructor(private mylogin:LoginService){
     //var first = this.mylogin.login("admin" , "admin2");
     //var seconde = this.mylogin.login("admin" , "admin");
 
     //console.log(first,seconde);
-    console.log(this.name);
+    //console.log(this.name);
     
     }
-    show(){
+    /*show(){
       console.log(this.name);
   }
   select(){
@@ -30,5 +31,10 @@ export class AppComponent {
   }
   focus(){
     console.log("you have focus");
+  }*/
+
+  login(){
+    var result= this.mylogin.login(this.name , this.password);
+    console.log(result);
   }
 }
